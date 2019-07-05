@@ -1,6 +1,7 @@
 package tests;
 
 import examples.Ex1_1;
+import examples.Ex1_2;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -15,6 +16,12 @@ public class ChapterOneTests {
 
         assertFalse(Ex1_1.isUniqueBetterSolution("Poppa John"));
         assertTrue(Ex1_1.isUniqueBetterSolution("Rodger"));
+    }
+
+    @Test
+    public void testExampleTwo() {
+        assertTrue(Ex1_2.isPermutation("who", "hwo"));
+        assertFalse(Ex1_2.isPermutation("requiem", "secular"));
     }
 }
 
