@@ -3,6 +3,7 @@ package tests;
 import examples.Ch01_ArraysAndStrings.Ex1_1_IsUnique;
 import examples.Ch01_ArraysAndStrings.Ex1_2_CheckPermutation;
 import examples.Ch01_ArraysAndStrings.Ex_1_3_URLify;
+import examples.Ch01_ArraysAndStrings.Ex_1_4_PalindromePermutation;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -31,6 +32,13 @@ public class ChapterOneTests {
     public void testExampleThree(){
         assertEquals("Mr%20John%20Smith", Ex_1_3_URLify.getUrlifyRecursive("Mr John Smith"));
         assertEquals("%20Hello%20", Ex_1_3_URLify.getUrlifyRecursive(" Hello "));
+    }
+
+    @Test
+    public void testExampleFour(){
+        assertTrue(Ex_1_4_PalindromePermutation.isPalindromePermutation("Tac o cat"));
+        assertTrue(Ex_1_4_PalindromePermutation.isPalindromePermutation("Rats live on no evil star"));
+        assertFalse(Ex_1_4_PalindromePermutation.isPalindromePermutation("taco cats"));
     }
 }
 
