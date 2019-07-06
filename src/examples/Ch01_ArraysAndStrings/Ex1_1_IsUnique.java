@@ -1,14 +1,14 @@
-package examples;
+package examples.Ch01_ArraysAndStrings;
 
 import java.util.Arrays;
 
 /**
- * examples.Ex1_1
+ * examples.Ch01_ArraysAndStrings.Ex1_1_IsUnique
  * 
  * Implement an algorithm to determine if a string has all unique characters.
  * What if you cannot use additional data structures?
  */
-public class Ex1_1 {
+public class Ex1_1_IsUnique {
 
     public static void main(String[] args) {
         

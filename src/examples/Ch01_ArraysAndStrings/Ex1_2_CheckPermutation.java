@@ -1,12 +1,12 @@
-package examples;
+package examples.Ch01_ArraysAndStrings;
 
 /**
- * examples.Ex1_2
+ * examples.Ch01_ArraysAndStrings.Ex1_2_CheckPermutation
  * 
  * Given two strings, write a method to decide if one is a isPermutation of the
  * other.
  */
-public class Ex1_2 {
+public class Ex1_2_CheckPermutation {
 
     /**
      * Determines whether or not Word One is a permutation of Word Two.
