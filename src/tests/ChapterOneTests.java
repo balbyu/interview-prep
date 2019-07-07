@@ -1,9 +1,6 @@
 package tests;
 
-import examples.Ch01_ArraysAndStrings.Ex1_1_IsUnique;
-import examples.Ch01_ArraysAndStrings.Ex1_2_CheckPermutation;
-import examples.Ch01_ArraysAndStrings.Ex_1_3_URLify;
-import examples.Ch01_ArraysAndStrings.Ex_1_4_PalindromePermutation;
+import examples.Ch01_ArraysAndStrings.*;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -39,6 +36,23 @@ public class ChapterOneTests {
         assertTrue(Ex_1_4_PalindromePermutation.isPalindromePermutation("Tac o cat"));
         assertTrue(Ex_1_4_PalindromePermutation.isPalindromePermutation("Rats live on no evil star"));
         assertFalse(Ex_1_4_PalindromePermutation.isPalindromePermutation("taco cats"));
+    }
+
+    @Test
+    public void testExampleFive(){
+        assertTrue(Ex_1_5_OneAway.isOneAway("Tails", "Tail"));
+        assertTrue(Ex_1_5_OneAway.isOneAway("Tudor", "Tudor"));
+        assertTrue(Ex_1_5_OneAway.isOneAway("Farts", "Forts"));
+        assertTrue(Ex_1_5_OneAway.isOneAway("Soccer", "Sccer"));
+        assertFalse(Ex_1_5_OneAway.isOneAway("Ballerina", "Baller"));
+    }
+
+    @Test
+    public void testExampleSix(){
+        assertEquals(Ex_1_6_StringCompression.getStringCompressionSimpler("aabcccccaaa"), "a2b1c5a3");
+        assertEquals(Ex_1_6_StringCompression.getStringCompressionSimpler(
+                "aaaaaaaabbbccddddzzzzzzzzzz"),
+                "a8b3c2d4z10");
     }
 }
 

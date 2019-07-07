@@ -26,7 +26,7 @@ public class Ex1_2_CheckPermutation {
      * @param string - string to sort
      * @return sorted string
      */
-    private static String sortString(String string) {
+    public static String sortString(String string) {
         char[] charArray = string.toCharArray();
         java.util.Arrays.sort(charArray);
         return new String(charArray);
