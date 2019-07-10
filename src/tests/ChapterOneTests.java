@@ -3,6 +3,8 @@ package tests;
 import examples.Ch01_ArraysAndStrings.*;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 /**
@@ -53,6 +55,32 @@ public class ChapterOneTests {
         assertEquals(Ex_1_6_StringCompression.getStringCompressionSimpler(
                 "aaaaaaaabbbccddddzzzzzzzzzz"),
                 "a8b3c2d4z10");
+    }
+
+    @Test
+    public void testExampleSeven(){
+//        int [][]  scores = {  { 1, 2, 3},
+//                                { 4, 5, 6 }};
+
+        int [] [] scores = {{ 1, 2, 3, 4, 5 ,6},
+                            { 7, 8, 9, 10, 11, 12 },
+                            {13, 14, 15, 16, 17, 18}};
+
+        int[][] rotateScores = Ex_1_7_RotateMatrix.rotateMatrix90Degrees(scores);
+
+        System.out.println("Before: ");
+        for (int[] row : scores)
+
+            // converting each row as string
+            // and then printing in a separate line
+            System.out.println(Arrays.toString(row));
+
+        System.out.println("\n" + "After: ");
+        for (int[] row : rotateScores)
+
+            // converting each row as string
+            // and then printing in a separate line
+            System.out.println(Arrays.toString(row));
     }
 }
 
