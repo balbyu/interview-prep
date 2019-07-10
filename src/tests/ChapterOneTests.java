@@ -58,29 +58,52 @@ public class ChapterOneTests {
     }
 
     @Test
-    public void testExampleSeven(){
-//        int [][]  scores = {  { 1, 2, 3},
-//                                { 4, 5, 6 }};
+    public void testExampleSeven() {
 
-        int [] [] scores = {{ 1, 2, 3, 4, 5 ,6},
-                            { 7, 8, 9, 10, 11, 12 },
-                            {13, 14, 15, 16, 17, 18}};
+        int[][] scores = {{1, 2, 3, 4, 5, 6},
+                {7, 8, 9, 10, 11, 12},
+                {13, 14, 15, 16, 17, 18}};
 
         int[][] rotateScores = Ex_1_7_RotateMatrix.rotateMatrix90Degrees(scores);
 
         System.out.println("Before: ");
-        for (int[] row : scores)
+        printArray(scores);
+        System.out.println("\n" + "After: ");
+        printArray(rotateScores);
+    }
 
-            // converting each row as string
-            // and then printing in a separate line
-            System.out.println(Arrays.toString(row));
+    @Test
+    public void testExampleEight(){
+
+        int[][] scores = {{1, 0, 3, 4, 5, 6},
+                {7, 8, 9, 10, 11, 12},
+                {13, 14, 15, 16, 17, 18}};
+
+        System.out.println("Before: ");
+        printArray(scores);
+
+        int[][]zeroedMatrix = Ex_1_8_ZeroMatrix.getZeroedMatrix(scores);
 
         System.out.println("\n" + "After: ");
-        for (int[] row : rotateScores)
+        printArray(zeroedMatrix);
+
+
+    }
+
+    @Test
+    public void testExampleNine(){
+       assertTrue(Ex_1_9_StringRotation.isRotation("apple", "pleap"));
+       assertTrue(Ex_1_9_StringRotation.isRotation("waterbottle", "erbottlewat"));
+    }
+
+    private void printArray(int[][] array){
+
+        for (int[] row : array) {
 
             // converting each row as string
             // and then printing in a separate line
             System.out.println(Arrays.toString(row));
+        }
     }
 }
 
