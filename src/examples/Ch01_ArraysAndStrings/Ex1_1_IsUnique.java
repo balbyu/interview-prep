@@ -3,7 +3,7 @@ package examples.Ch01_ArraysAndStrings;
 import java.util.Arrays;
 
 /**
- * examples.Ch01_ArraysAndStrings.Ex1_1_IsUnique
+ * Ex1_1_IsUnique
  * 
  * Implement an algorithm to determine if a string has all unique characters.
  * What if you cannot use additional data structures?

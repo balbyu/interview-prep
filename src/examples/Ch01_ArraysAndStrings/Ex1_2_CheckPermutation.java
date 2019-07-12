@@ -1,7 +1,7 @@
 package examples.Ch01_ArraysAndStrings;
 
 /**
- * examples.Ch01_ArraysAndStrings.Ex1_2_CheckPermutation
+ * Ex1_2_CheckPermutation
  * 
  * Given two strings, write a method to decide if one is a isPermutation of the
  * other.
@@ -26,7 +26,7 @@ public class Ex1_2_CheckPermutation {
      * @param string - string to sort
      * @return sorted string
      */
-    public static String sortString(String string) {
+    private static String sortString(String string) {
         char[] charArray = string.toCharArray();
         java.util.Arrays.sort(charArray);
         return new String(charArray);
