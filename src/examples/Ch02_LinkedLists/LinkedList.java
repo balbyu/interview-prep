@@ -145,6 +145,61 @@ public class LinkedList {
     }
 
     /**
+     * Deletes the middle node of a LinkedList (i.e., any node but
+     * the first and last node, not necessarily the exact middle)
+     * @param node
+     */
+    public void deleteMiddleNode(LinkedListNode node){
+
+        if(head.equals(node)) return; //Node is already head
+
+        LinkedListNode current = head;
+
+        while(current.next != null){
+            if(current.next == null) return; // Return if the node provided is the tail
+
+            //See if the next node matches. If so, set the next node equal to the next next node.
+            if(current.next.equals(node)){
+                current.next = current.next.next;
+            }
+
+            //Move along the list
+            current = current.next;
+        }
+    }
+
+    /**
+     * Adds two LinkedLists number equivalents and returns the sum as a linked list.
+     * @param listOne - LinkedList One
+     * @param listTwo - LinkedList Two
+     * @return - Summation of LinkedList values
+     */
+    public static LinkedList addLinkedLists(LinkedList listOne, LinkedList listTwo){
+        LinkedList newList = new LinkedList();
+
+        int one = getIntFromLinkedList(listOne);
+        int two = getIntFromLinkedList(listTwo);
+        int sum = one + two;
+        String reverse = new StringBuilder(Integer.toString(sum)).reverse().toString();
+
+        for (int i = 0; i < reverse.length(); i++) {
+            newList.append(Integer.valueOf(String.valueOf(reverse.charAt(i))));
+        }
+        return newList;
+    }
+
+    private static int getIntFromLinkedList(LinkedList list){
+        StringBuilder builder = new StringBuilder();
+        LinkedListNode current = list.head;
+
+        while(current != null){
+            builder.append(current.data);
+            current = current.next;
+        }
+        return Integer.valueOf(builder.reverse().toString());
+    }
+
+    /**
      * Prints the LinkedList data in a horizontal array.
      */
     public void print(){

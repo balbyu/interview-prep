@@ -40,4 +40,37 @@ public class ChapterTwoTests {
         list.printKthToLast(list.head, 1);
     }
 
+    @Test
+    public void testExampleThree(){
+        System.out.println("Before: ");
+        list.print();
+        System.out.println();
+
+        list.deleteMiddleNode(list.head.next.next.next); //3
+        System.out.println("After: ");
+        list.print();
+    }
+
+    @Test
+    public void testExampleFour(){
+
+        System.out.println("First: ");
+        LinkedList first = new LinkedList();
+        first.append(1);
+        first.append(2);
+        first.append(3);
+        first.print();
+        System.out.println();
+        System.out.println("Second: ");
+        LinkedList second = new LinkedList();
+        second.append(4);
+        second.append(5);
+        second.append(6);
+        second.append(7);
+        second.print();
+        System.out.println();
+        System.out.println("Added: ");
+        LinkedList.addLinkedLists(first, second).print();
+    }
+
 }
