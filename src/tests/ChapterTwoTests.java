@@ -1,8 +1,10 @@
 package tests;
 
-import examples.Ch02_LinkedLists.LinkedList;
+import DataStructures.LinkedList;
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * All unit tests for Chapter Two - Linked Lists
@@ -71,6 +73,16 @@ public class ChapterTwoTests {
         System.out.println();
         System.out.println("Added: ");
         LinkedList.addLinkedLists(first, second).print();
+    }
+
+    @Test
+    public void testExampleSix(){
+        LinkedList list = new LinkedList();
+        list.append(1);
+        list.append(2);
+        list.append(1);
+
+        assertTrue(LinkedList.isLinkedListAPalindrone(list));
     }
 
 }

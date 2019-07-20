@@ -1,4 +1,4 @@
-package examples.Ch02_LinkedLists;
+package DataStructures;
 
 /**
  * This class represents a node in a Linked List.

@@ -1,4 +1,4 @@
-package examples.Ch02_LinkedLists;
+package DataStructures;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -188,7 +188,12 @@ public class LinkedList {
         return newList;
     }
 
-    private static int getIntFromLinkedList(LinkedList list){
+    /**
+     * Returns an Integer in reverse order from a series of LinkedListNodes
+     * @param list - The LinkedList that contains the int
+     * @return the reverse ordered integer
+     */
+    public static int getIntFromLinkedList(LinkedList list){
         StringBuilder builder = new StringBuilder();
         LinkedListNode current = list.head;
 
@@ -198,6 +203,35 @@ public class LinkedList {
         }
         return Integer.valueOf(builder.reverse().toString());
     }
+
+    /**
+     * Returns an Integer in reverse order from a series of LinkedListNodes
+     * @param list - The LinkedList that contains the int
+     * @return the reverse ordered integer
+     */
+    public static String getStringFromLinkedList(LinkedList list){
+        StringBuilder builder = new StringBuilder();
+        LinkedListNode current = list.head;
+
+        while(current != null){
+            builder.append(current.data);
+            current = current.next;
+        }
+        return builder.toString();
+    }
+
+    /**
+     * Checks to see if
+     * @param list
+     * @return
+     */
+    public static boolean isLinkedListAPalindrone(LinkedList list){
+        String regular = getStringFromLinkedList(list);
+        String reversed = (new StringBuilder(getStringFromLinkedList(list)).reverse().toString());
+        if(regular.equals(reversed)) return true;
+        return false;
+    }
+
 
     /**
      * Prints the LinkedList data in a horizontal array.
