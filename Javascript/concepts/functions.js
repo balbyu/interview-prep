@@ -60,3 +60,19 @@ for (var i = 0; i < 5; i++) {
 }
 
 fns.forEach((f) => f());
+
+let say = {
+  hello() {
+    console.log("Hello.");
+  },
+  whatsUp() {
+    console.log("Whats up?");
+  },
+  goodbye() {
+    console.log("Goodbye!");
+  },
+};
+
+say.hello();
+say.whatsUp();
+say.goodbye();
